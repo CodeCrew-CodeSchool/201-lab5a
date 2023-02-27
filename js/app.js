@@ -37,8 +37,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+    if (a == undefined || b == undefined) {
+        a = parseInt(document.getElementById('a').value);
+        b = parseInt(document.getElementById('b').value);
+    }
     let product = a * b;
-    return [product, `The product of ${a} and ${b} is ${product}.`];
+    let answer = [product, `The product of ${a} and ${b} is ${product}.`];
+    console.log(answer)
+    return answer;
 }
 
 // Here is the test for multiply(); uncomment it to run it
