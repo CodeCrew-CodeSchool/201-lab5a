@@ -65,7 +65,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    if (a == undefined || b == undefined || c == undefined) {
+        a = parseInt(document.getElementById('a').value);
+        b = parseInt(document.getElementById('b').value);
+        c = parseInt(document.getElementById('c').value);
+    }
+    let sum = sum(a, sum(b, c)[0])[0];
+    let product = multiply(a, multiply(b, c)[0])[0];
+    let sumS = `${a} and ${b} and ${c} sum to ${sum}`;
+    let prodS = `The product of ${a} and ${b} and ${c} is ${product}.`;
+    let answer = [sum, product, sumS, prodS];
+    console.log(answer);
+    return answer;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
