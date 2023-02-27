@@ -70,11 +70,11 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
         b = parseInt(document.getElementById('b').value);
         c = parseInt(document.getElementById('c').value);
     }
-    let sum = sum(a, sum(b, c)[0])[0];
+    let s = sum(a, sum(b, c)[0])[0];
     let product = multiply(a, multiply(b, c)[0])[0];
-    let sumS = `${a} and ${b} and ${c} sum to ${sum}`;
+    let sumS = `${a} and ${b} and ${c} sum to ${s}.`;
     let prodS = `The product of ${a} and ${b} and ${c} is ${product}.`;
-    let answer = [sum, product, sumS, prodS];
+    let answer = [s, product, sumS, prodS];
     console.log(answer);
     return answer;
 }
