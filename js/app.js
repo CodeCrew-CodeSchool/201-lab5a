@@ -98,7 +98,27 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+    let a_ = 0, b_ = 0, c_ = 0;
+    if (!sumArr || a == undefined || b == undefined || c == undefined) {
+        a_ = parseInt(document.getElementById('a').value);
+        b_ = parseInt(document.getElementById('b').value);
+        c_ = parseInt(document.getElementById('c').value);
+        
+    } else {
+        a_ = sumArr[0];
+        b_ = sumArr[1];
+        c_ = sumArr[2];
+    }
+    sumArr = [a_, b_, c_];
+    let as = 0;
+    let az = sumArr.join(',');
 
+    for (let i = 0; i < sumArr.length; i++) {
+        as = sum(as, sumArr[i])[0];
+    }
+
+    let answer = [as, `${az} was passed in as an array of numbers, and ${as} is their sum.`];
+    return answer;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
