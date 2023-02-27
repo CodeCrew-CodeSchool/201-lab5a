@@ -9,7 +9,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-    return [];
+    if (a == undefined || b == undefined) {
+        a = parseInt(document.getElementById('a').value);
+        b = parseInt(document.getElementById('b').value);
+    }
+    let s = a + b;
+    let answer = [s, 'The sum of ' + a + ' and ' + b + ' is ' + s + '.'];
+    console.log(answer)
+    return answer;
+    //`The sum of ${a} and ${b} is ${s}`
+        // sum
+        // concatenated string - "The sum of 4 and 7 is 11."
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -27,7 +37,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+    let product = a * b;
+    return [product, `The product of ${a} and ${b} is ${product}.`];
 }
 
 // Here is the test for multiply(); uncomment it to run it
